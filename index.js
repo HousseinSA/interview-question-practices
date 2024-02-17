@@ -62,16 +62,16 @@
 
 // const closureFunction = outerFunction()
 // closureFunction() // Logs: I am from the outer function
-const friendsContainer = document.createElement("ul")
-const friends = [
-  { name: "hussein", numOfCalls: 23 },
-  { name: "neji", numOfCalls: 12 },
-  { name: "zayn", numOfCalls: 44 },
-  { name: "ahmed", numOfCalls: 5 },
-  { name: "leita", numOfCalls: 20 },
-  { name: "leita", numOfCalls: 20 },
-  { name: "leita", numOfCalls: 20 },
-]
+// const friendsContainer = document.createElement("ul")
+// const friends = [
+//   { name: "hussein", numOfCalls: 23 },
+//   { name: "neji", numOfCalls: 12 },
+//   { name: "zayn", numOfCalls: 44 },
+//   { name: "ahmed", numOfCalls: 5 },
+//   { name: "leita", numOfCalls: 20 },
+//   { name: "leita", numOfCalls: 20 },
+//   { name: "leita", numOfCalls: 20 },
+// ]
 // const sortedFriends = friends.sort((a, b) => b.numOfCalls - a.numOfCalls)
 // sortedFriends.map((friend) => {
 //   const friendElement = document.createElement("li")
@@ -183,30 +183,163 @@ const friends = [
 
 // setter and getter in classes
 
-class Rectangle {
-  constructor(width, height) {
-    ;(this._width = width), (this._height = height)
-  }
+// class Rectangle {
+//   constructor(width, height) {
+//     ;(this._width = width), (this._height = height)
+//   }
 
-  set width(newW) {
-    if (newW > 0) {
-      this._width = newW
-    }
-  }
+//   set width(newW) {
+//     if (newW > 0) {
+//       this._width = newW
+//     }
+//   }
 
-  set height(newH) {
-    if (newH > 0) {
-      this._height = newH
-    }
-  }
-  get width() {
-    return this._width
-  }
-  get height() {
-    return this._height6t
-  }
-}
+//   set height(newH) {
+//     if (newH > 0) {
+//       this._height = newH
+//     }
+//   }
+//   get width() {
+//     return this._width
+//   }
+//   get height() {
+//     return this._height6t
+//   }
+// }
 
-const rectangle = new Rectangle(200, 100)
-console.log(rectangle.height)
-rectangle.height = console.log(rectangle.height)
+// const rectangle = new Rectangle(200, 100)
+// console.log(rectangle.height)
+// rectangle.height = console.log(rectangle.height)
+
+// revert string function
+
+// const revertString = () => {
+//   const inputString = prompt("type something here.")
+//   if (typeof inputString !== "string") return
+//   const revertString = inputString.split("").reverse().join("")
+//   return revertString
+// }
+
+// console.log(revertString())
+
+// checking palindrome
+// function isPalindrome(inputString) {
+
+//   let revertedString = inputString.split("").reverse().join("").toLowerCase()
+//   return inputString.toLowerCase() === revertedString
+// }
+
+// console.log(isPalindrome('abba'))
+
+//  checking number palindrome
+// function createPalindromeNumber(n) {
+//   if (n < 0 || !Number.isInteger(n)) {
+//     return "Input must be a positive integer."
+//   } else {
+//     // Step 1: Initialize variables
+//     let reverse = 0
+//     let temp = n
+
+//     // Step 2: Calculate the reverse of the number
+//     while (temp > 0) {
+//       const digit = temp % 10 // Extract the last digit
+//       reverse = reverse * 10 + digit // Append the digit to the reverse
+//       temp = Math.floor(temp / 10) // Remove the last digit
+//     }
+
+//     // Step 3: Create the palindrome number by concatenating the original number with its reverse
+//     const palindrome = n === reverse
+
+//     return palindrome
+//   }
+// }
+
+// // Example usage:
+// console.log(createPalindromeNumber(238491))
+
+// function isDegitPalindrome(num) {
+//   if (num < 0 || !Number.isInteger(num)) {
+//     return "number cannot be negative or not number type "
+//   } else {
+//     let reverse = 0
+//     let temp = num
+//     while (temp > 0) {
+//       let digit = temp % 10
+//       reverse = reverse * 10 + digit
+//       temp = Math.floor(temp / 10)
+//       console.log(digit)
+//       console.log(reverse)
+//       console.log(temp)
+//     }
+
+//     return num === reverse
+//   }
+// }
+
+// console.log(isDegitPalindrome(123223))
+
+// fizzbuzz
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) console.log("fuzzbuzz")
+//   else if (i % 3 === 0) console.log("fuzz")
+//   else if (i % 5 === 0) console.log("buzz")
+//   else console.log(i)
+// }
+
+// strings are anagrams
+
+// function checkAnagrams(str1, str2) {
+//   str1 = str1.toLowerCase()
+//   str2 = str2.toLowerCase()
+//   if (str1.length !== str2.length) return false
+
+//   const sortedStr1 = str1.split("").sort().join("")
+//   const sortedStr2 = str2.split("").sort().join("")
+//   return sortedStr1 === sortedStr2
+// }
+
+// console.log(checkAnagrams("listen", "silent"))
+
+// find the missing number
+
+// function findMissingNum(nums) {
+//   const maxNum = Math.max(...nums)
+//   const totalSum = (maxNum * (maxNum + 1)) / 2
+//   const arraySum = nums.reduce((acc, num) => acc + num, 0)
+//   // The missing number is the difference between totalSum and arraySum
+//   return totalSum - arraySum
+// }
+
+// console.log(findMissingNum([3, 4, 6]))
+
+// function findMissingNumber(nums) {
+//   const n = nums.length
+//   // Calculate the sum of all numbers from 0 to n
+//   const totalSum = (n * (n + 1)) / 2
+//   // Calculate the sum of numbers in the array
+//   const arraySum = nums.reduce((acc, num) => acc + num, 0)
+//   // The missing number is the difference between totalSum and arraySum
+//   return totalSum - arraySum
+// }
+
+// // Example usage:
+// const nums = [0, 1, 3, 4, 5] // Missing number is 2
+// console.log(findMissingNumber(nums)) // Output: 2
+
+// two sums
+
+// function getTwoSums(array, target) {
+//   const map = new Map()
+
+//   for (let i = 0; i < array.length; i++) {
+//     const compliment = target - array[i]
+
+//     if (map.has(compliment)) {
+//       return [map.get(compliment), i]
+//     }
+//     map.set(array[i], i)
+//   }
+//   return []
+// }
+
+// console.log(getTwoSums([1, 2, 3, 5], 3))
