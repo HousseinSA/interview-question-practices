@@ -343,3 +343,86 @@
 // }
 
 // console.log(getTwoSums([1, 2, 3, 5], 3))
+
+// Uber interview question
+
+// const moveZerosToEnd = (nums) => {
+//   let left = 0
+//   let right = 0
+//   while (right < nums.length) {
+//     if (nums[right] !== 0) {
+//       ;[nums[left], nums[right]] = [nums[right], nums[left]]
+//       left++
+//     }
+//     right++
+//   }
+//   return nums
+// }
+
+// console.log(moveZerosToEnd([0, 1, 0, 3, 12]))
+
+// function fizzBuzz() {
+//   for (let i = 1; i <= 100; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log("fuzzbuzz")
+//     }
+//     if (i % 3 === 0) {
+//       console.log("fuzz")
+//     }
+//     if (i % 5 === 0) {
+//       console.log("buzz")
+//     } else {
+//       console.log(i)
+//     }
+//   }
+// }
+
+// fizzBuzz()
+
+// find min and max
+// function findMax(nums) {
+//   const max = Math.max(...nums)
+//   return max
+// }
+// function findMin(nums) {
+//   const min = Math.min(...nums)
+//   return min
+// }
+
+// console.log(findMin([1, 2, 3, 4, 6, 8, 7, 10]))
+// console.log(findMax([1, 2, 3, 4, 6, 8, 7, 10]))
+
+// characterCount in a word
+
+// function charactInWordCounter(str) {
+//   str = str.split(" ").join("")
+//   const charCount = {}
+//   for (let char of str) {
+//     charCount[char] = (charCount[char] || 0) + 1
+//   }
+//   return charCount
+// }
+
+// const str = "hello neji"
+// const charCount = charactInWordCounter(str)
+
+// for (char in charCount) {
+//   console.log(`${char} is occurs ${charCount[char]} times `)
+// }
+
+// function uberQuestion(numbs) {
+//   let right = 0
+//   let left = 0
+//   while (right < numbs.length) {
+//     if (numbs[right] !== 0) {
+//       ;[numbs[left], numbs[right]] = [numbs[right], numbs[left]]
+//       left++
+//     }
+//     right++
+//   }
+//   return numbs
+// }
+
+// array = [0, 1, 2, 5, 4, 6, 0, 3]
+
+// console.log(uberQuestion([0, 1, 0, 3, 12]))
