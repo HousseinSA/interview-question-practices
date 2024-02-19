@@ -426,3 +426,74 @@
 // array = [0, 1, 2, 5, 4, 6, 0, 3]
 
 // console.log(uberQuestion([0, 1, 0, 3, 12]))
+
+// event loop
+// Asynchronous function to fetch data
+// function fetchData() {
+//   return new Promise((resolve, reject) => {
+//     // Simulating a network request delay with setTimeout
+//     setTimeout(() => {
+//       const data = { id: 1, name: "John Doe" }
+//       resolve(data) // Resolve with mock data after 1 second
+//     }, 1000)
+//   })
+// }
+
+// // Function to handle data after fetching
+// // function processData(data) {
+// //   console.log("Received data:", data)
+// // }
+
+// // // Function to simulate executing some synchronous code
+// // function syncFunction() {
+// //   console.log("Starting synchronous function...")
+// // }
+
+// // // Fetch data asynchronously
+// // syncFunction() // This function is executed immediately
+// // fetchData().then(processData) // This line initiates a network request but doesn't block the main thread
+
+// // console.log("End of script") // This line is executed immediately
+
+// // closures
+// function outFunction() {
+//   const outerVariable = "from outer function"
+//   function innerFunction() {
+//     console.log(outerVariable)
+//   }
+//   return innerFunction
+// }
+
+// const innerFunc = outFunction()
+// innerFunc()
+// timer
+
+// function logMessage() {
+//   console.log("hello neji")
+// }
+
+// const interval = setInterval(logMessage, 1000)
+
+// setTimeout(() => {
+//   clearInterval(interval)
+//   console.log("interval stopped.")
+// }, 5000)
+
+// two sums
+
+function twoSum(array, target) {
+  const map = {}
+
+  for (let i = 0; i < array.length; i++) {
+    const SumOfTarget = target - array[i]
+    console.log(SumOfTarget)
+    console.log(map)
+    if (map[SumOfTarget] !== undefined) {
+      return [map[SumOfTarget], i]
+    }
+    map[array[i]] = i
+  }
+  return []
+}
+
+console.log(twoSum([1, 2, 6, 4, 3], 4))
