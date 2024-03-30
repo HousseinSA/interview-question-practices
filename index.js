@@ -416,7 +416,7 @@
 //   while (right < numbs.length) {
 //     if (numbs[right] !== 0) {
 //       ;[numbs[left], numbs[right]] = [numbs[right], numbs[left]]
-//       left++
+//       left++s
 //     }
 //     right++
 //   }
@@ -481,19 +481,84 @@
 
 // two sums
 
-function twoSum(array, target) {
-  const map = {}
+// function TwoSum(nums, target) {
+//   const map = new Map()
+//   for (let i = 0; i < nums.length; i++) {
+//     const sumOfTarget = target - nums[i]
+//     if (map.has(sumOfTarget)) {
+//       return [map.get(sumOfTarget), i]
+//     }
+//     map.set(nums[i], i)
+//   }
+//   return []
+// }
 
-  for (let i = 0; i < array.length; i++) {
-    const SumOfTarget = target - array[i]
-    console.log(SumOfTarget)
-    console.log(map)
-    if (map[SumOfTarget] !== undefined) {
-      return [map[SumOfTarget], i]
-    }
-    map[array[i]] = i
-  }
-  return []
-}
+// console.log(TwoSum([5, 3, 6, 2, 7, 5, 9], 8))
 
-console.log(twoSum([1, 2, 6, 4, 3], 4))
+// flatten nested arrays
+
+// function arrayFlatter(array) {
+//   let flatArray = []
+
+//   for (let i = 0; i < array.length; i++) {
+//     if (Array.isArray(array[i])) {
+//       flatArray = flatArray.concat(arrayFlatter(array[i]))
+//     } else {
+//       flatArray.push(array[i])
+//     }
+//   }
+//   return flatArray
+// }
+
+// console.log(arrayFlatter([1, 2, 3, 5, [(1, 54, 2, 3, 5)], [1, 66, 32, 5]]))
+
+// palandrome in numbers only not converting it into i string method
+// function isNUmPalindrome(num) {
+//   if (num < 0 || (num % 10 === 0 && num !== 0)) return false
+
+//   let reverse = 0
+//   let orginal = num
+//   while (num > 0) {}
+// }
+// reversedNum = 0 * 10 + 1
+// console.log(Math.floor(1 / 10))
+
+// sum of array
+// function sumArray(num) {
+//   const sumArray = num.reduce((current, total) => current + total, 0)
+//   return sumArray
+// }
+
+// console.log(sumArray([1, 2, 3, 4, 5])) // Output: 15
+// console.log(sumArray([10, 20, 30])) // Output: 60
+// console.log(sumArray([]))
+
+// function numberPalindrome(num) {
+//   if (num < 0 || (num % 10 !== 0 && num === 0)) return false
+//   let reverseNum = 0
+//   let originalNum = num
+//   while (num > 0) {
+//     let digit = num % 10
+//     reverseNum = reverseNum * 10 + digit
+//     num = Math.floor(num / 10)
+//   }
+
+//   return originalNum === reverseNum
+// }
+
+// console.log(numberPalindrome(12321))
+
+// Count Vowels
+
+// function VowelsCounter(phrase) {
+//   let lowerCaseString = phrase.toLowerCase()
+//   let counter = 0
+//   const vowelsArray = ["a", "e", "i", "o", "u"]
+
+//   for (let i = 0; i < phrase.length; i++) {
+//     if (vowelsArray.includes(lowerCaseString[i])) counter++
+//   }
+//   return counter
+// }
+
+// console.log(VowelsCounter(prompt("enter phrase")))
