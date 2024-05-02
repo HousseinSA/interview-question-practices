@@ -66,26 +66,4 @@
 
 // 2 css specificity
 
-// get the intex of target num of an array
 
-// function getTarget(numArray, target) {
-//   let left = 0
-//   let right = numArray.length - 1
-
-//   while (left <= right) {
-//     let mid = Math.floor((left + right) / 2)
-//     console.log("mid", mid)
-//     if (numArray[mid] === target) return mid
-
-//     if (numArray[mid] < target) {
-//       left = mid + 1
-//       console.log("left condition lesser that target", left)
-//     } else {
-//       right = mid - 1
-//       console.log("right if mid index is greater  that target", right)
-//     }
-//   }
-//   return -1
-// }
-
-// console.log(getTarget([-1, 0, 3, 5, 9, 12], 9))

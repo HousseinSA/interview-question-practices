@@ -563,3 +563,82 @@
 
 // console.log(VowelsCounter(prompt("enter phrase")))
 
+
+
+// get the intex of target num of an array
+
+// function getTarget(numArray, target) {
+//   let left = 0
+//   let right = numArray.length - 1
+
+//   while (left <= right) {
+//     let mid = Math.floor((left + right) / 2)
+//     console.log("mid", mid)
+//     if (numArray[mid] === target) return mid
+
+//     if (numArray[mid] < target) {
+//       left = mid + 1
+//       console.log("left condition lesser that target", left)
+//     } else {
+//       right = mid - 1
+//       console.log("right if mid index is greater  that target", right)
+//     }
+//   }
+//   return -1
+// }
+
+// console.log(getTarget([-1, 0, 3, 5, 9, 12], 9))
+
+
+// Count Vowels
+
+// function vowelsCounter(phrase){
+//     const phraseLowerCase = phrase.toLowerCase()
+//     const vowelsArray = ["a", "e", "i", "o", "u"]
+//     let counter = 0
+    
+//     for (let i = 0; i<phraseLowerCase.length ;i++){
+//         vowelsArray.includes(phraseLowerCase[i]) ? counter++ :counter
+//     }
+//     return 'vowels is word '+phrase + ' is '+ counter
+//     }
+    
+//     console.log(vowelsCounter(prompt("enter phrase")))
+    
+// reverseString & palandrome revisit
+
+
+// function reverseString(phrase){
+// const orignal = phrase.toLowerCase()
+
+// const reversedPhrase =phrase.split('').reverse().join('')
+
+// return orignal === reversedPhrase
+
+// }
+
+
+// console.log(reverseString(prompt('enter something')))
+
+
+
+// find missing number 
+
+// function findMissingNumber(numArray){
+// const numLength = numArray.length + 1
+
+// const expectedSum = (numLength* (numLength+1))/2
+// const actualSum = numArray.reduce((a, b)=>a+b, 0)
+
+// return expectedSum = actualSum
+
+// }
+
+
+// console.log(findMissingNumber([1, 2, 3, 4, 5, 6]))
+
+
+// next up 
+// Anagram Check:
+// Find the Maximum Subarray Sum
+// Two Sum

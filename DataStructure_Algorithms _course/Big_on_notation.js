@@ -45,15 +45,15 @@
 
 // upAndDown([1, 2, 3, 4, 5, 6, 7])
 
-function nestedLoop(n) {
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n; j++) {
-      console.log(i, j)
-    }
-  }
-}
+// function nestedLoop(n) {
+//   for (let i = 0; i < n; i++) {
+//     for (let j = 0; j < n; j++) {
+//       console.log(i, j)
+//     }
+//   }
+// }
 
-console.log(nestedLoop(2))
+// console.log(nestedLoop(2))
 
 
 // next simplify big o notation
