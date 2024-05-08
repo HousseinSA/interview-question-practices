@@ -6,25 +6,25 @@
 4. Control Flow
 5. Arrays
 6. Objects
-7. Classes
-8. DOM Manipulation
-9. Asynchronous JavaScript
-10. ES6 Features
-11. Scope and Closures
-12. Modules
-13. AJAX and Fetch API
-14. Error Handling
-15. JSON
-16. Promises and Async/Await
-17. Event Handling
-18. Browser Storage
-19. Regular Expressions
-20. Debugging Tools
-21. Functional Programming
-22. Testing
-23. Security
-24. Performance Optimization
-25. Version Control
+   1. Classes
+7. DOM Manipulation
+8. Asynchronous JavaScript
+9.  ES6 Features
+10. Scope and Closures
+11. Modules
+12. AJAX and Fetch API
+13. Error Handling
+14. JSON
+15. Promises and Async/Await
+16. Event Handling
+17. Browser Storage
+18. Regular Expressions
+19. Debugging Tools
+20. Functional Programming
+21. Testing
+22. Security
+23. Performance Optimization
+24. Version Control
 
 // **Additional JavaScript Concepts:** 26. Event Loop 27. Prototype and Prototypal Inheritance 28. Modules and Module Formats 29. TypeScript 30. Web APIs 31. Functional Programming Libraries 32. Server-Side JavaScript 33. Client-Side Frameworks/Libraries 34. Progressive Web Apps (PWAs) 35. WebAssembly 36. Immutable Data Structures 37. Web Components 38. GraphQL 39. Serverless Architecture 40. WebSockets 41. Service Workers
 
