@@ -43,43 +43,43 @@ MyStaticClass.myStaticMethod()
 
 // inheritance classes
 
-class Animal {
-    speak(){
-        console.log('animals can speak!')
-    }
-}
+// class Animal {
+//     speak(){
+//         console.log('animals can speak!')
+//     }
+// }
 
-class Cat extends Animal {
-    meow(){
-        console.log('Cats meows!')
-    }
-}
+// class Cat extends Animal {
+//     meow(){
+//         console.log('Cats meows!')
+//     }
+// }
 
-const noveTheCat  = new Cat()
+// const noveTheCat  = new Cat()
 
-noveTheCat.speak()
-noveTheCat.meow()
+// noveTheCat.speak()
+// noveTheCat.meow()
 
-// getter and setter 
+// // getter and setter 
  
 
-class Getset {
-    constructor(){
-        this.value   = 0
-    }
+// class Getset {
+//     constructor(){
+//         this.value   = 0
+//     }
 
-    get(){
-        return this.value   
-    }
+//     get(){
+//         return this.value   
+//     }
 
-    set(newValue){
-        if(this._newValue >0){
-            this.value   = newValue
-        }else {
-            console.log('will no assign a negative number!')
-        }
+//     set(newValue){
+//         if(this._newValue >0){
+//             this.value   = newValue
+//         }else {
+//             console.log('will no assign a negative number!')
+//         }
         
-    }
-}
-Getset.value = 5 
-console.log(Getset.value)
+//     }
+// }
+// Getset.value = 5 
+// console.log(Getset.value)
