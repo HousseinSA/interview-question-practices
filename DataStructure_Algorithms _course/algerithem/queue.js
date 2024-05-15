@@ -5,22 +5,58 @@ const collection = []
 this.print = function (){
     console.log(collection)
 }
-this.enqueue = function (value){
-    return collection.push(value)
-}
+
 
 this.dequeue = function(){
     return collection.shift()
 }
-this.peek = function(){
+this.front = function(){
     return collection[0]
 }
+
+
+// interact 
+this.enqueue = function (value){
+    if(collection.length === 0){    
+       collection.push(value)
+    }
+    else {
+       let added= false 
+       for( let i = 0 ; i< collection.length ; i++ ){
+           if(value[1]<collection[i][1]){
+               collection.splice(i,0,value)
+               added = true
+               break
+           }
+       }
+       if(!added){
+       collection.push(value)
+   
+       }
+    }
+   }
+
+
 this.size = function (){
-    return collection.length
+    return collection.length        
 }
 }
+
 const queue = new Queue()
-queue.enqueue('a')
-queue.dequeue()
-queue.enqueue('b')
-console.log(queue.peek())
+// queue.enqueue('a')
+// queue.dequeue()
+// queue.enqueue('b')
+// queue.front()
+
+queue.enqueue(['reds', 3])
+queue.enqueue(['killer', 2])
+queue.enqueue(['lovely', 1])
+
+console.log(queue.print())
+
+// console.log(queue.peek())
+
+
+
+
+
