@@ -98,58 +98,98 @@
 // advanced use of class bank account example 
 
 
-class BankAccount {
-    constructor (account, accountName, balance, ){
-        this.account = account,
-        this.accountName = accountName,
-        this.balance = balance
-        this.transactions = []
-    }
+// class BankAccount {
+//     constructor (account, accountName, balance, ){
+//         this.account = account,
+//         this.accountName = accountName,
+//         this.balance = balance
+//         this.transactions = []
+//     }
 
-    Deposit(amount){
-        if(amount>0){
-          this.balance += amount
-          console.log(`the deposit been added successfully the amount is${amount}, current balance:${this.balance}`)
-          this.transactions.push({type:'deposit', amount:amount})
-        }else {
-            console.log('sorry this amount cannot be added into account!')
-        }
-    }
-        withdrawing(amount){
-            if (amount <this.balance && this.balance> 0 && amount >0 ){
-                this.balance -=amount
-                console.log(`withdrawing was successfull the amount withdrawn was${amount} current balance: ${this.balance}`)
-          this.transactions.push({type:'withdraw', amount:amount})
+//     Deposit(amount){
+//         if(amount>0){
+//           this.balance += amount
+//           console.log(`the deposit been added successfully the amount is${amount}, current balance:${this.balance}`)
+//           this.transactions.push({type:'deposit', amount:amount})
+//         }else {
+//             console.log('sorry this amount cannot be added into account!')
+//         }
+//     }
+//         withdrawing(amount){
+//             if (amount <this.balance && this.balance> 0 && amount >0 ){
+//                 this.balance -=amount
+//                 console.log(`withdrawing was successfull the amount withdrawn was${amount} current balance: ${this.balance}`)
+//           this.transactions.push({type:'withdraw', amount:amount})
 
-            }else {
-            console.log('sorry this amount cannot be withdrawn from account!')
+//             }else {
+//             console.log('sorry this amount cannot be withdrawn from account!')
                 
-            }
-        }
-    transactionList(){
-        console.log(`account id: ${this.account}`)
-        console.log(`account name: ${this.accountName}`)
-        console.log('transactions history')
-        this.transactions.forEach(transaction=>{
-            console.log(` type: ${transaction.type} amount:${transaction.amount}`)
-        })
-    }
-    }
+//             }
+//         }
+//     transactionList(){
+//         console.log(`account id: ${this.account}`)
+//         console.log(`account name: ${this.accountName}`)
+//         console.log('transactions history')
+//         this.transactions.forEach(transaction=>{
+//             console.log(` type: ${transaction.type} amount:${transaction.amount}`)
+//         })
+//     }
+//     }
 
 
-const mybankAccount = new BankAccount(8649, 'hussein', 6400)
+// const mybankAccount = new BankAccount(8649, 'hussein', 6400)
 
-mybankAccount.Deposit(200)
-mybankAccount.withdrawing(5000)
-mybankAccount.transactionList()
-
-
+// mybankAccount.Deposit(200)
+// mybankAccount.withdrawing(5000)
+// mybankAccount.transactionList()
 
 
-// Class Properties and Methods
+
+
+// Class Properties and Methods 
 // Static Methods
 // Getters and Setters
 // Inheritance
 // Method Overriding
 // Private Fields and Methods (using # syntax)
 // Using Classes in Modules
+
+
+// product class 
+
+// class Product {
+//     constructor(name, price){
+//         this.name = name 
+//         this.price = price
+//     }
+// showProduct(){
+//     console.log(this.name +' is ' + this.price)
+// }
+
+// }
+
+// const redbull =  new Product('redbull' , 10+ ' dollars  ')
+// redbull.showProduct()
+
+// getter and setter example 
+
+class PersonName {
+    constructor(firstName, lastName){
+        this.firstName = firstName, 
+        this.lastName =lastName
+    }
+ get fullName(){
+   return `${this.firstName} ${this.lastName}`
+ }
+
+ set fullName (name){
+    const[firstName, lastName ] = name.split(' ')
+
+    this.firstName = firstName
+    this.lastName = lastName
+ }
+}
+
+const person = new PersonName()
+person.fullName ='hussein sedoum'
+console.log(person.fullName)
