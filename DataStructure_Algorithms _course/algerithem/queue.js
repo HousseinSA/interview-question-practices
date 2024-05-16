@@ -16,23 +16,17 @@ this.front = function(){
 
 
 // interact 
-this.enqueue = function (value){
-    if(collection.length === 0){    
-       collection.push(value)
+this.enqueue = function(value){
+    if(collection.length === 0){
+        collection.push(value)
+    }else {
+   for (let i =0 ; i <collection.length ; i++){
+    if(value[1] <collection[i][1]  ){
+        collection.splice(i, 0 ,value)
+         break
     }
-    else {
-       let added= false 
-       for( let i = 0 ; i< collection.length ; i++ ){
-           if(value[1]<collection[i][1]){
-               collection.splice(i,0,value)
-               added = true
-               break
-           }
-       }
-       if(!added){
-       collection.push(value)
-   
-       }
+  
+   }
     }
    }
 
@@ -52,11 +46,6 @@ queue.enqueue(['reds', 3])
 queue.enqueue(['killer', 2])
 queue.enqueue(['lovely', 1])
 
-console.log(queue.print())
+console.log(queue.print())  
 
-// console.log(queue.peek())
-
-
-
-
-
+// 
