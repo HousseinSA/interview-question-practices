@@ -16,20 +16,20 @@ this.front = function(){
 
 
 // interact 
-this.enqueue = function(value){
-    if(collection.length === 0){
-        collection.push(value)
-    }else {
-   for (let i =0 ; i <collection.length ; i++){
-    if(value[1] <collection[i][1]  ){
-        collection.splice(i, 0 ,value)
-         break
-    }
   
-   }
-    }
-   }
+this.enqueue = function(value){
+    if(collection.length === 0 ){
+        collection.push(value)
+    } else {
+        for (let i = 0 ; i <collection.length; i ++){
+            if(value[1]<collection[i][1]){
+                collection.splice(i, 0, value)
+            break
 
+            }
+        }
+    }
+}
 
 this.size = function (){
     return collection.length        
