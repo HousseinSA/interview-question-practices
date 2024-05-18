@@ -67,3 +67,31 @@
 // 2 css specificity
 
 
+
+// revist fizz buzz 
+
+// const numbs = [1, 2, 4, 6, 7, 4, 2, 3, ]
+
+// for(let i = 1;i < numbs.length ; i++ ){
+//   if( i % 5 === 0 && i %3 === 0){
+//     console.log('fizzbuzz')
+
+//   }else if (i % 3 === 0){
+//     console.log('fizz')
+//   }else if (i %5 === 0 ){
+//     console.log('buzz')
+//   }else {
+//     console.log(i)
+//   }
+// }
+
+// reverse string without using methods 
+
+const string = 'neji'
+let reverse = ''
+
+for (let i = string.length -1 ; i>=0 ; i--){
+  reverse += string[i]
+}
+
+console.log(reverse)
