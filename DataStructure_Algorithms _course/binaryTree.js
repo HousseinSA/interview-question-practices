@@ -1,8 +1,8 @@
 class Node {
-    constructor(data, left=null, right= null){
-        this.data =data
-        this.left = left
-        this.right = right
+    constructor(data, right=null, left=null){
+    this.data = data,
+    this.left = left, 
+    this.right = right
     }
 }
 
@@ -11,35 +11,45 @@ class BST {
         this.root = null
     }
 
-    add (data){
-        const newNode= this.root
-        if(newNode === null ){
-            this.root = new Node(data)
-        }else { 
-            const searchTree = (node) => {
-                if(data < node.data){
-                    if(node.left === null){
-                        node.left = new Node(data)
-                    }else if(node.left!== null){
-                        return searchTree(node.left)
-                    }
-                }else if(data > node.data){
-                    if(node.right === null){
-                        node.right = new Node(data)
-                    }else if(node.right!== null){
-                        return searchTree(node.right)
-                    }
-                }else {
-                    return null
+    add(data){
+        const newNode = this.root
+
+    if(newNode === null){
+        this.node = new Node(data)
+    }else {
+        const searchTree = function(node){
+            if(data <node.data){
+                if(node.left === null){
+                    node.left = new Node(data)
+                }else if(node.left !== null){
+                    return searchTree(node.left)
+                } 
+            }else if(data>node.data){
+                 if (node.right ===null){
+                    node.right = new Node(data)
+                }else if(node.right !== null){
+                    return searchTree(node.right)
                 }
             }
-            return searchTree(newNode)
+            
+            
+            else {
+                return null
+            }
         }
+        return searchTree(newNode)
     }
+    }
+
+
 }
+
+
 const bts = new BST()
 
-bts.add(9)
-bts.add(6)
-bts.add(20)
+
+bts.add(5)
+bts.add(4)
+bts.add(10)
+
 console.log(bts)

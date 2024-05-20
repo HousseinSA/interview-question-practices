@@ -14,17 +14,17 @@
 // console.log(urlBuilder("zayn"))
 
 // 1 function call apply, and bind
-  // const john = {
-  //   firstName: "hussein",
-  //   lastName: "abba",
-  // }
+// const john = {
+//   firstName: "hussein",
+//   lastName: "abba",
+// }
 
-  // function greet(greeting, message) {
-  //   return `${greeting} ${this.firstName} ${this.lastName} `
-  // }
+// function greet(greeting, message) {
+//   return `${greeting} ${this.firstName} ${this.lastName} `
+// }
 
-  // console.log(greet.call(john, "hello", "how are you?"))
-  // console.log(greet.apply(john, ["hello", "how are you?"]))
+// console.log(greet.call(john, "hello", "how are you?"))
+// console.log(greet.apply(john, ["hello", "how are you?"]))
 
 //2 event loop ask chatgpt
 
@@ -66,9 +66,7 @@
 
 // 2 css specificity
 
-
-
-// revist fizz buzz 
+// revist fizz buzz
 
 // const numbs = [1, 2, 4, 6, 7, 4, 2, 3, ]
 
@@ -85,13 +83,35 @@
 //   }
 // }
 
-// reverse string without using methods 
+// reverse string without using methods
 
-const string = 'neji'
-let reverse = ''
+// const string = 'neji'
+// let reverse = ''
 
-for (let i = string.length -1 ; i>=0 ; i--){
-  reverse += string[i]
+// for (let i = string.length -1 ; i>=0 ; i--){
+//   reverse += string[i]
+// }
+
+// console.log(reverse)
+
+// number palindrome
+
+
+function isPalindromeNumber(num) {
+  if (num < 0) {
+      return false;
+  }
+
+  let originalNum = num;
+  let reversedNum = 0;
+
+  while (num > 0) {
+      reversedNum = reversedNum * 10 + num % 10;
+      num = Math.floor(num / 10);
+  }
+
+  return originalNum === reversedNum;
 }
 
-console.log(reverse)
+// Example usage
+console.log(isPalindromeNumber(121));  // Output: true
