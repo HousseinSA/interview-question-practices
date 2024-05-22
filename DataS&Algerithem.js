@@ -97,3 +97,51 @@
 // linking.append(2)
 // linking.append(3)
 // linking.show()
+
+
+// big o notation  
+
+
+// sumUpTo  function 
+
+
+// o(n) and o(n)
+//  first method 
+
+// function sumUpTwo1(num){
+//     return num * (num +1) /2 
+// }
+
+// function sumUpTwo2(num){
+// let total =0
+
+// for (let i = 1; i <= num ; i++){
+//     total +=i
+// }
+// return total 
+// }
+
+// let t1, t2
+ 
+
+// t1 =  performance.now()
+// sumUpTwo1(25000)  
+// t2 =  performance.now()
+// console.log(`sumUpTwo1: ${(t2 - t1) / 1000} seconds`);
+
+
+// t1 =  performance.now()
+// sumUpTwo2(25000)  
+// t2 =  performance.now()
+// console.log(`sumUpTwo2: ${(t2 - t1) / 1000} seconds`);
+
+function combineWords(wordsArray) {
+    for (let i = 0; i < wordsArray.length; i++) {
+        for (let j = 0 ; j < wordsArray.length; j++) {  // Fixed loop condition
+            console.log(wordsArray[i] + ' ' + wordsArray[j]);
+        }
+    }
+}
+
+combineWords(['zayn', 'hussein', 'neji']);  // Removed extra space
+
